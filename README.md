@@ -39,7 +39,7 @@ We will closely evaluate these (and others) in the case study as we work to unde
 # Case Study Details
 In healthcare analytics, there are several quality metrics to be considered but for this case study, I'll focus on efficiency, which is all about avoiding waste. This includes minimizing waste of equipment, supplies, ideas and energy.
 
-Length of stay (or LOS) is considered an important indicator of the efficiency of hospital management. It's calculated as the total duration in days for a patient stay in a hospital. A shorter LOS is often desirable in hospital operations. Although, many factors can impact LOS. Patient age, health status, the type of procedure (or surgery), whether or not there were any complications, and the size of the hospital are some common factors.
+Length of stay (or LOS) is considered an important indicator of the efficiency of hospital management. It's calculated as the total duration in days of a patient's stay in a hospital. A shorter LOS is often desirable in hospital operations. Although, many factors can impact LOS. Patient age, health status, the type of procedure (or surgery), whether or not there were any complications, and the size of the hospital are some common factors.
 
 Here are some terms you will encounter throughout this case study: 
 
@@ -47,9 +47,9 @@ An inpatient: is a person who has been admitted to a hospital bed.
 
 A discharge: is defined as the release of a patient from hospital care by a medical worker. 
 
-Disposition: This is the patient destination or status upon discharge, for instance to another facility or to home. 
+Disposition: This is the patient destination or status upon discharge, for instance to another facility or home. 
 
-An elective surgery: is a procedure that was planned in advance, in other words, it was not due to an emergency.
+An elective surgery: is a procedure that was planned, in other words, it was not due to an emergency.
 
 In this case study, the focus is on patients who received hip replacement surgery. Here's a bit of a background on what this procedure is all about. Patients with hip pain, typically arthritis, may require elective hip replacement surgery. In this procedure, damaged bone and cartilage are surgically removed and replaced with prosthetic components. 
 
@@ -58,4 +58,6 @@ Hospital stays can range from 0 to 2 or more days.
 
 #  Exploratory Analysis Of The Dataset
 
-I loaded the data into the PowerQuery editor to investigate it for errors and performed some exploratory analysis. I removed all the rows of data where the description was not "HIP REPLACEMENT,TOT/PRT". I created a _Measures table to host my measures then I created a measure called "Total Hospitals" that shows the Distinct count of hospitals, 
+I loaded the data into the PowerQuery editor to investigate it for errors and performed some exploratory analysis. I removed all the rows of data where the description was not "HIP REPLACEMENT, TOT/PRT" and I created a _Measures table to host my measures. I then created a measure called "Total Hospitals" to show the Distinct count of hospitals.
+
+To build an understanding of patient profiles in the dataset I explored preliminary demographics such as gender and age, I created a measure "Total Discharges" to count total discharges in the dataset and stored it in the _Measures table. I had the task of showing the breakdown for patients 50 years and older which I did.

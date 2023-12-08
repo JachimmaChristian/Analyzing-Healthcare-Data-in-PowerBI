@@ -21,11 +21,16 @@ The dataset has some key attributes to analyze efficiency. Length of stay measur
 
 ![](healthcare1.png)
 
-Listed here are some of the key attributes of interest for the case study, these include 
+Here's a list of some of the key attributes of interest for the case study:
+
 facility_id, 
+
 age_group, 
+
 patient disposition, 
+
 diagnosis description, 
+
 severity of illness, and risk of mortality. 
 
 We will closely evaluate these (and others) in the case study as we work to understand what factors impact the length of stay and related costs.
@@ -46,9 +51,11 @@ Disposition: This is the patient destination or status upon discharge, for insta
 
 An elective surgery: is a procedure that was planned in advance, in other words, it was not due to an emergency.
 
-In this case study, the focus is on patients who received hip replacement surgery. Here's a bit of a background on what this procedure is all about. Patients with hip pain, typically arthritis, may require elective hip replacement surgery. In this procedure, damaged bone and cartilage is surgically removed and replaced with prosthetic components. 
+In this case study, the focus is on patients who received hip replacement surgery. Here's a bit of a background on what this procedure is all about. Patients with hip pain, typically arthritis, may require elective hip replacement surgery. In this procedure, damaged bone and cartilage are surgically removed and replaced with prosthetic components. 
 
-Hospital stay can range from 0 to 2 or more days.
+Hospital stays can range from 0 to 2 or more days.
 
 
 #  Exploratory Analysis Of The Dataset
+
+I loaded the data into the PowerQuery editor to investigate it for errors and performed some exploratory analysis. I removed all the rows of data where the description was not "HIP REPLACEMENT,TOT/PRT". I created a _Measures table to host my measures then I created a measure called "Total Hospitals" that shows the Distinct count of hospitals, 

@@ -70,6 +70,9 @@ I created two visualizations to show the average LOS days by age group and gende
 
 The leadership team at HealthStat want to see how average LOS days and total discharges compare between hospitals. The clinical advisor also added for me to factor in the total number of practising surgeons by the hospital.
 
-I created a line and stacked column chart to visualize both the total discharges and the average LOS days by hospital
+I created a line and stacked column chart to visualize both the total discharges by hospital and the average LOS days and set the visualization to show only the top 15 hospitals by total discharges.
+
+Next, I created a new measure that calculates the count of surgeons and included that measure in my chart of LOS and discharges by hospital as a tooltip. 
+
 
 

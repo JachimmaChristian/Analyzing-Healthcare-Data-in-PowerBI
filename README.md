@@ -60,4 +60,9 @@ Hospital stays can range from 0 to 2 or more days.
 
 I loaded the data into the PowerQuery editor to investigate it for errors and performed some exploratory analysis. I removed all the rows of data where the description was not "HIP REPLACEMENT, TOT/PRT" and I created a _Measures table to host my measures. I then created a measure called "Total Hospitals" to show the Distinct count of hospitals.
 
-To build an understanding of patient profiles in the dataset I explored preliminary demographics such as gender and age, I created a measure "Total Discharges" to count total discharges in the dataset and stored it in the _Measures table. I had the task of showing the breakdown for patients 50 years and older which I did.
+To build an understanding of patient profiles in the dataset I explored the preliminary demographics such as gender and age and created a measure "Total Discharges" to count total discharges in the dataset and stored it in the _Measures table. 
+
+HealthStat assigned a clinical advisor to direct me in some of my tasks, this is to help guide my analysis from a clinical perspective, the clinical advisor requested to see a breakdown for patients aged 50 and older. I modified my visualization of gender distribution by age group to account for this change.
+
+After establishing some key information about total hospitals and discharges in the dataset along with some interesting demographics on the patient profile. It was time to explore how length of stay (LOS) days varied across the demographic fields. I created a measure (Average LOS Days) to calculate the average length of stay days and stored the measure in the _Measures table.
+

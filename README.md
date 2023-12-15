@@ -74,5 +74,22 @@ I created a line and stacked column chart to visualize both the total discharges
 
 Next, I created a new measure that calculates the count of surgeons and included that measure in my chart of LOS and discharges by hospital as a tooltip. 
 
+# Findings from our exploration 
+
+1. 151 hospitals in New York State perform elective hip replacement surgeries.
+2. With over 26thousand (26,286) total discharges
+3. The average LOS was 2.65 days for the procedure although there was significant variability between hospitals.
+4. Although we have explored LOS against some demographics such as age and gender, we are yet to understand the reason behind the variability in LOS between the hospitals.
+
+Going forward let's look at Average cost per discharge, I calculated this by dividing the sum of total costs by the sum of total discharges. This metric will serve as a benchmark to compare cost efficiency between hospitals and highlight areas for efficiency improvement.
+
+
+
+
+
+
+
+
+
 
 

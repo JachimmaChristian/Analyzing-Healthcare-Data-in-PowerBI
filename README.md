@@ -92,11 +92,17 @@ Procedure and type of equipment used.
 
 We'll be exploring to see which hospitals stand out with the highest cost and LOS relative to the state average and which hospitals stand out as the biggest outliers overall. We'll also explore to see if larger surgical program size impact LOS and Cost and we'll perform a root cause analysis to find out what factors influence LOS and Cost the most.
 
+The average cost per discharge and the average LOS vary per hospital facility, So I have to create two metrics to quantify the relative difference between each hospital vs the overall state average.  
 
+I created two measures to compute overall state averages, one for Average cost per discharge and another for average LOS days and labelled the measures with ALL at the end of the name.
 
+I built another two measures to calculate the percentage difference in Average Cost per Discharge and the percentage difference in LOS days called "% Var Average Cost per Discharge" and "% Var Average LOS Days" respectively. 
 
+Placing these in a table visual and using conditional formatting to indicate where values of average cost and LOS days are higher or equal to the overall values. Let's investigate further to see which hospitals stand out as outliers. We'll be using a dynamic quadrant chart to achieve this. 
 
+TO highlight the outliers I created a Scatter chart that displays Average LOS Days vs Average Cost per Discharge with each hospital as a distinct dot and added two average lines to the chart. To enhance the chart further I added Total Discharges as bubble size and coloured the bubbles by health service area. Lastly I added one more reference line for 90th percentile so that values that fall outside this line are our outliers 
 
+Before diving into the root cause analysis, I was asked by my boss to account for surgical program size, while our source data doesn't explicitly state the surgical program size 
 
 
 

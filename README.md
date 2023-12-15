@@ -81,7 +81,19 @@ Next, I created a new measure that calculates the count of surgeons and included
 3. The average LOS was 2.65 days for the procedure although there was significant variability between hospitals.
 4. Although we have explored LOS against some demographics such as age and gender, we are yet to understand the reason behind the variability in LOS between the hospitals.
 
-Going forward let's look at Average cost per discharge, I calculated this by dividing the sum of total costs by the sum of total discharges. This metric will serve as a benchmark to compare cost efficiency between hospitals and highlight areas for efficiency improvement.
+Going forward, let's look at the Average cost per discharge, I calculated this by dividing the sum of total costs by the sum of total discharges. This metric will serve as a benchmark to compare cost efficiency between hospitals and highlight areas for efficiency improvement.
+
+Factors that can impact the cost of patient stay include:
+
+Patient severity of condition
+Age
+Size of hospital
+Procedure and type of equipment used.
+
+We'll be exploring to see which hospitals stand out with the highest cost and LOS relative to the state average and which hospitals stand out as the biggest outliers overall. We'll also explore to see if larger surgical program size impact LOS and Cost and we'll perform a root cause analysis to find out what factors influence LOS and Cost the most.
+
+
+
 
 
 

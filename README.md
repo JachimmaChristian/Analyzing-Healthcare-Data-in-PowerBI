@@ -102,7 +102,7 @@ Placing these in a table visual and using conditional formatting to indicate whe
 
 TO highlight the outliers I created a Scatter chart that displays Average LOS Days vs Average Cost per Discharge with each hospital as a distinct dot and added two average lines to the chart. To enhance the chart further I added Total Discharges as bubble size and coloured the bubbles by health service area. Lastly I added one more reference line for 90th percentile so that values that fall outside this line are our outliers 
 
-Before diving into the root cause analysis, I was asked by my boss to account for surgical program size, while our source data doesn't explicitly state the surgical program size 
+Before diving into the root cause analysis, I was asked by my boss to account for surgical program size, because our source data doesn't explicitly state the surgical program size, I created a new table using DAX function that summarizes total discharges and surgeons by hospital                    
 
 
 

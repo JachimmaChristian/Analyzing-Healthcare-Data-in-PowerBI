@@ -108,23 +108,29 @@ The average cost per discharge and the average LOS vary per hospital facility. S
 
 I created two measures to compute overall state averages, one for Average cost per discharge and another for average LOS days and labelled the measures with ALL at the end of the name.
 
+Average Cost Per Discharge All| Average LOS Days All
 :-----------------------:|:---------------------------:
-![](healthcare)                    |![](healthcare)    
+![](healthcare8.png)                    |![](healthcare9.png)    
 
 I built another two measures to calculate the percentage difference in Average Cost per Discharge and the percentage difference in LOS days called "% Var Average Cost per Discharge" and "% Var Average LOS Days" respectively. 
 
+% Var Average Cost per Discharge|% Var Average LOS Days
 :-----------------------:|:---------------------------:
-![](healthcare)                    |![](healthcare)    
-
+![](healthcare10.png)                    |![](healthcare11.png)    
 
 Placing these in a table visual and using conditional formatting to indicate where values of average cost and LOS days are higher or equal to the overall values. Let's investigate further to see which hospitals stand out as outliers. We'll be using a dynamic quadrant chart to achieve this. 
 
-TO highlight the outliers I created a Scatter chart that displays Average LOS Days vs Average Cost per Discharge with each hospital as a distinct dot and added two average lines to the chart. To enhance the chart further I added Total Discharges as bubble size and coloured the bubbles by health service area. Lastly I added one more reference line for 90th percentile so that values that fall outside this line are our outliers.
+![](healthcare7.png)
 
-![](healthcare) 
+To highlight the outliers I created a Scatter chart that displays Average LOS Days vs Average Cost per Discharge with each hospital as a distinct dot and added two average lines to the chart. To enhance the chart further I added Total Discharges as bubble size and coloured the bubbles by health service area. Lastly I added one more reference line for 90th percentile so that values that fall outside this line are our outliers. 
+
+![](healthcare12.png)
 
 Before diving into the root cause analysis, I was asked by my boss to account for surgical program size, Our source data doesn't explicitly state the surgical program size, so I created a new table using DAX function that summarizes total discharges and surgeons by hospital next I updated my data model to join the hospital_discharges table with the surgical_program_volume_summary, I grouped the Total discharges in 200s then labelled them into a more defining group that became our column for Surgical Program Size.
 
+ New Table Created using Dax |     Data Modelling    | New column created using Dax
+:---------------------------:|:---------------------:|:---------------------:
+![](healthcare13.png)          |![](healthcare15.png)  |![](healthcare14.png)
 
 Now let's proceed to investigate the root cause impacting cost and LOS, the clinical advisor has provided a list of factors that they want to assess they include:
 
@@ -137,9 +143,13 @@ Age Bins
 Surgical program size
 Health service area
 
-I created a column chart for each of the above factors to summarize the Average LOS Days, looking at the charts we see that some factors stand out above others but its still not easy to tell which factor most influence average LOS days. 
+I created a column chart for each of the above factors to summarize the Average LOS Days, looking at the charts we see that some factors stand out above others but it's still not easy to tell which factor most influences average LOS days. 
 
-I introduced the Key influencer visual bringing in the eight variables assessed above, I used the key influencer visual to assess both the Average LOS Days and the Average Cost Per Discharge.  
+![](healthcare16.png)
+
+I introduced the Key influencer visual bringing in the eight variables assessed above, I used the key influencer visual to assess both the Average LOS Days and the Average Cost Per Discharge. 
+
+![](healthcare17.png)
 
 Key Insights uncovered: 
 

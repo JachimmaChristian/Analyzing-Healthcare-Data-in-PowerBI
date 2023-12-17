@@ -118,9 +118,22 @@ Health service area
 
 I created a column chart for each of the above factors to summarize the Average LOS Days, looking at the charts we see that some factors stand out above others but its still not easy to tell which factor most influence average LOS days. 
 
-I introduced the Key influncer visual bringing in the eight variables assessed above, I used the key influencer visual to assess both Average LOS Days and the Average Cost Per Discharge.
+I introduced the Key influencer visual bringing in the eight variables assessed above, I used the key influencer visual to assess both the Average LOS Days and the Average Cost Per Discharge.  
 
+Key Insights uncovered: 
 
+1. Average cost per discharge was $20,910 and there was significant variability between hospital facilities
+2. The root cause analysis uncovered that some attributes stood out over others to influence both cost and average LOS. Top influencers increasing average LOS and cost:
+
+Extreme illness severity
+Extreme/ Major mortality risk 
+
+These two stood out as having the most significant impact on reduced efficiency.
+
+3. Hospitals in New York City had the highest LOS and cost overall
+4. LOS was influenced by patient disposition to a skilled nursing home
+
+Final Dashboard: 
 
 
 

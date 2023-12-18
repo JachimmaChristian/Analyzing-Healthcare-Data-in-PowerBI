@@ -164,7 +164,11 @@ These two stood out as having the most significant impact on reduced efficiency.
 3. Hospitals in New York City had the highest LOS and cost overall
 4. LOS was influenced by patient disposition to a skilled nursing home
 
-Final Dashboard: 
+Final Dashboard: Conclusively, I put all the visual subsets of insights together into a report template and loaded the Healthstat branding into it. I created a “Home” page and provided users with quick access to navigate between pages in the report.
+
+The HealthStat team now has a cohesive report that will enable their understanding of the key impacts on average LOS and cost for hospitals across the state of New York. 
+
+This will inform them on where targeted quality improvements can be made to both improve the hospital's operational efficiency and patient experience.
 
 
 

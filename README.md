@@ -5,7 +5,15 @@ I leveraged my DAX skills to create measures and generate insightful visualizati
 
 This case study gave me a chance to practice a range of Power BI skills, working with real-world data.  
 
+**Skills Demonstrated** 
+1. Data modeling
+2. Exploratory data analysis
+3. Root cause analysis
+4. DAX calculations and
+5. Report design.
+
 Enough with the chitchat let's dive in!
+
 
 
 # The Problem
@@ -15,13 +23,13 @@ In this case study, a fictitious consulting company called HealthStat has hired 
 # Dataset & Data Model
 The dataset was provided by Healthstat. They've captured patient-level data on all hospital stays in a single year for elective hip replacement surgeries across the state of New York.
 
-The dataset is one single table with 30 columns Each row in the dataset represents a single inpatient stay, from their admission to discharge date. The health information in this dataset is not individually identifiable (This means the file does not contain personal health information).
+The dataset is one single table with 30 columns. Each row in the dataset represents a single inpatient stay, from their admission to discharge date. The health information in this dataset is not individually identifiable (This means the file does not contain any personal health information).
 
-The dataset has some key attributes to analyze efficiency. Length of stay measured in total days and Total costs attributed to each hospital stay.
+The dataset has some key attributes to analyze efficiency: Length of stay measured in total days and Total costs attributed to each hospital stay.
 
 ![](healthcare1.png)
 
-Here's a list of some of the key attributes of interest for the case study:
+Here's a list of some of the key columns of interest for the case study:
 
 facility_id, 
 
@@ -37,7 +45,7 @@ We will closely evaluate these (and others) in the case study as we work to unde
 
 
 # Case Study Details
-In healthcare analytics, there are several quality metrics to be considered but for this case study, I'll focus on efficiency, which is all about avoiding waste. This includes minimizing waste of equipment, supplies, ideas and energy.
+In healthcare analytics, there are several quality metrics to be considered but for this case study, our focus is on efficiency, which is all about avoiding waste. This includes minimizing waste of equipment, supplies, ideas and energy.
 
 Length of stay (or LOS) is considered an important indicator of the efficiency of hospital management. It's calculated as the total duration in days of a patient's stay in a hospital. A shorter LOS is often desirable in hospital operations. Although, many factors can impact LOS. Patient age, health status, the type of procedure (or surgery), whether or not there were any complications, and the size of the hospital are some common factors.
 
@@ -97,14 +105,14 @@ Going forward, let's look at the Average cost per discharge, I calculated this b
 
 Factors that can impact the cost of patient stay include:
 
-Patient severity of condition
-Age
-Size of hospital
-Procedure and type of equipment used.
+1. Patient severity of condition
+2. Age
+3. Size of hospital
+4. Procedure and type of equipment used.
 
 We'll be exploring which hospitals stand out with the highest cost and LOS relative to the state average and which hospitals stand out as the biggest outliers overall. We'll also explore to see if a larger surgical program size impacts LOS and Cost and we'll perform a root cause analysis to find out what factors influence LOS and Cost the most.
 
-The average cost per discharge and the average LOS vary per hospital facility. So I have to create two metrics to quantify the relative difference between each hospital vs the overall state average.  
+The average cost per discharge and the average LOS vary per hospital facility. So I created two metrics to quantify the relative difference between each hospital vs the overall state average.  
 
 I created two measures to compute overall state averages, one for Average cost per discharge and another for average LOS days and labelled the measures with ALL at the end of the name.
 
@@ -118,21 +126,23 @@ I built another two measures to calculate the percentage difference in Average C
 :-----------------------:|:---------------------------:
 ![](healthcare10.png)                    |![](healthcare11.png)    
 
-Placing these in a table visual and using conditional formatting to indicate where values of average cost and LOS days are higher or equal to the overall values. Let's investigate further to see which hospitals stand out as outliers. We'll be using a dynamic quadrant chart to achieve this. 
+I placed these measures in a table visual and used conditional formatting to indicate where values of average cost and LOS days are higher or equal to the overall values. 
+
+Let's investigate further to see which hospitals stand out as outliers. We'll be using a dynamic quadrant chart to achieve this. 
 
 ![](healthcare7.png)
 
-To highlight the outliers I created a Scatter chart that displays Average LOS Days vs Average Cost per Discharge with each hospital as a distinct dot and added two average lines to the chart. To enhance the chart further I added Total Discharges as bubble size and coloured the bubbles by health service area. Lastly I added one more reference line for 90th percentile so that values that fall outside this line are our outliers. 
+To highlight the outliers I created a Scatter chart that displays Average LOS Days vs Average Cost per Discharge with each hospital as a distinct dot and added two average lines to the chart. To enhance the chart further I added Total Discharges as bubble size and coloured the bubbles by health service area. Lastly, I added one more reference line for the 90th percentile so that values that fall outside this line are our outliers. 
 
 ![](healthcare12.png)
 
-Before diving into the root cause analysis, I was asked by my boss to account for surgical program size, Our source data doesn't explicitly state the surgical program size, so I created a new table using DAX function that summarizes total discharges and surgeons by hospital next I updated my data model to join the hospital_discharges table with the surgical_program_volume_summary, I grouped the Total discharges in 200s then labelled them into a more defining group that became our column for Surgical Program Size.
+Before diving into the root cause analysis, my boss asked me to account for surgical program size. Our source data doesn't explicitly state the surgical program size, so I created a new table using DAX functions that summarize total discharges and surgeons by hospital next I updated my data model to join the hospital_discharges table with the surgical_program_volume_summary table, I grouped the Total discharges in 200s then labelled them into a more defining group that became our column for Surgical Program Size.
 
- New Table Created using Dax |     Data Modelling    | New column created using Dax
+ surgical_program_volume_summary table created using Dax |    Data Modelling    | Surgical Program Size column created using Dax
 :---------------------------:|:---------------------:|:---------------------:
 ![](healthcare13.png)          |![](healthcare15.png)  |![](healthcare14.png)
 
-Now let's proceed to investigate the root cause impacting cost and LOS, the clinical advisor has provided a list of factors that they want to assess they include:
+Now let's proceed to investigate the root cause impacting cost and LOS, the clinical advisor has provided a list of factors that they want to assess:
 
 Risk of mortality
 Severity of illness description
@@ -164,11 +174,9 @@ These two stood out as having the most significant impact on reduced efficiency.
 3. Hospitals in New York City had the highest LOS and cost overall
 4. LOS was influenced by patient disposition to a skilled nursing home
 
-Final Dashboard: Conclusively, I put all the visual subsets of insights together into a report template and loaded the Healthstat branding into it. I created a “Home” page and provided users with quick access to navigate between pages in the report.
+Final Dashboard: Conclusively, I put all the visual subsets of insights into a report template and loaded the Healthstat branding into it. I created a “Home” page and provided users with quick access to navigate between pages in the report.
 
-The HealthStat team now has a cohesive report that will enable their understanding of the key impacts on average LOS and cost for hospitals across the state of New York. 
-
-This will inform them on where targeted quality improvements can be made to both improve the hospital's operational efficiency and patient experience.
+The HealthStat team now has a cohesive report that will enable their understanding of the key impacts on average LOS and cost for hospitals across New York. This will inform them of where targeted quality improvements can be made to improve both the hospital's operational efficiency and patient experience.
 
 
 

@@ -178,7 +178,7 @@ Final Dashboard: Conclusively, I put all the visual subsets of insights into a r
 
 The HealthStat team now has a cohesive report that will enable their understanding of the key impacts on average LOS and cost for hospitals across New York. This will inform them of where targeted quality improvements can be made to improve both the hospital's operational efficiency and patient experience.
 
-Click [Here](https://www.novypro.com/project/case-study-analyzing-healthcare-data) to interact with the dashboard. You can also view the pdf of the final report [Here]() 
+Click [Here](https://www.novypro.com/project/case-study-analyzing-healthcare-data) to interact with the dashboard. You can also view the pdf of the final report [Here](https://github.com/JachimmaChristian/Analyzing-Healthcare-Data-in-PowerBI/blob/main/Analyzing%20Healthcare%20Data.pdf) 
 
 
 
